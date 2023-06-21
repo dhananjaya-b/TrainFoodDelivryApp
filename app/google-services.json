@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "478511597421",
+    "project_id": "snakeclassification-c74ff",
+    "storage_bucket": "snakeclassification-c74ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478511597421:android:c6b16caa616b0c2186bc64",
+        "android_client_info": {
+          "package_name": "com.example.trainfooddelivryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478511597421-ublthkm552hbbjm5as1hlua5jvoke9rg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGh6TmKc3VHoPVVPMNZk_l3nmjnwV696I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478511597421-ublthkm552hbbjm5as1hlua5jvoke9rg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
