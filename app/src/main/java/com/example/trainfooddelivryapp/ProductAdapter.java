@@ -47,9 +47,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.textViewTitle.setText(product.getName());
         Double price = (Double) product.getPrice();
         holder.textViewPrice.setText(price.toString());
+        Double available = (Double) product.getAvailable();
         Picasso.get().load(product.getImageLink()).into(holder.imageView);
-
-
+        holder.available.setText("Available :"+available.toString());
         holder.imageViewSub.setOnClickListener(view -> {
             if (holder.q > 1) {
                 holder.q--;
@@ -58,8 +58,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         });
 
         holder.imageViewAdd.setOnClickListener(view -> {
+
             holder.q++;
+            product.setAvailable(product.getAvailable()-1);
             holder.textViewQuantity.setText(String.valueOf(holder.q));
+            Double a = (Double) product.getAvailable();
+            holder.available.setText("Available :"+a.toString());
         });
 
         holder.buttonAddToCart.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +96,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         ImageView imageViewSub;
         TextView textViewTitle;
         TextView textViewQuantity;
+        TextView available;
 
         TextView textViewPrice;
         Button buttonAddToCart;
@@ -105,6 +110,7 @@ int q;
             imageViewAdd=itemView.findViewById(R.id.addQuantity);
             imageViewSub=itemView.findViewById(R.id.subQuantity);
             textViewQuantity=itemView.findViewById(R.id.quantity);
+            available=itemView.findViewById(R.id.availabiliy);
             q = 1; // Set initial quantity value
         }
     }

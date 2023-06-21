@@ -10,14 +10,24 @@ public class Product implements Parcelable {
     private double price;
     private String imageLink;
 
-    public Product(String name, String type, String description, double price, String imageLink) {
+    private double available;
+
+    public Product(String name, String type, String description, double price, String imageLink, double available) {
         this.name = name;
         this.type = type;
         this.description = description;
         this.price = price;
         this.imageLink = imageLink;
+        this.available = available;
     }
 
+    public double getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(double available) {
+        this.available = available;
+    }
     // Getters and Setters for the attributes
 
     public String getName() {
@@ -68,6 +78,7 @@ public class Product implements Parcelable {
         description = in.readString();
         price = in.readDouble();
         imageLink = in.readString();
+        available =in.readDouble();
     }
 
     public static final Creator<Product> CREATOR = new Creator<Product>() {
@@ -94,5 +105,6 @@ public class Product implements Parcelable {
         dest.writeString(description);
         dest.writeDouble(price);
         dest.writeString(imageLink);
+        dest.writeDouble(available);
     }
 }
