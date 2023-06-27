@@ -20,7 +20,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView.setSelectedItemId(R.id.action_home);
     }
     HomeFragment firstFragment = new HomeFragment();
-    OrderFragment fourthFragment = new OrderFragment();
+    MyFragment fourthFragment = new MyFragment();
     ProfileFragment fifthFragment = new ProfileFragment();
 
     @Override
@@ -33,12 +33,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                         .commit();
                 return true;
 
-            case R.id.action_orders:
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.flFragment, fourthFragment)
-                        .commit();
-                return true;
+
             case R.id.action_profile:
                 getSupportFragmentManager()
                         .beginTransaction()

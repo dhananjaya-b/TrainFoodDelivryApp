@@ -12,6 +12,16 @@ public class Product implements Parcelable {
 
     private double available;
 
+    public Product() {
+    }
+
+    public Product(String name, double price, String imageLink, double available) {
+        this.name = name;
+        this.price = price;
+        this.imageLink = imageLink;
+        this.available = available;
+    }
+
     public Product(String name, String type, String description, double price, String imageLink, double available) {
         this.name = name;
         this.type = type;
